@@ -1,0 +1,2 @@
+# use-three-thrshold-get-the-D-based-on-the-object
+use three thrshold :threshold_rainfall,%[flag,SEmin,SEmax,SEavg,SEd,SEr,SEt,RSE,D]读入两个文件file_truth,file_forecast,分别计算各项误差；%f_cells()的作用：识别各个雨区，并且计算出每个雨区的特征信息（Cx，Cy,Cmin,Cmax,Cavg）和%向量表示Zj=(X0+sin(angle)*Y*i....)后缀为jk的表示的是forecast的信息，后缀是j的表示truth的信，Zj的每一列表示truth的每个cell的vector informations；Zjk矩阵的每一列表示forecast的每个cell的vector，Zj_intensity矩阵中每一列表示truth中每个雨区的中心（Cx，Cy）和降雨强度（Cmin,Cmax,Cavg）;注意论文中Lack, Limpert, Fox_2010_An Object-Oriented Multiscale Verification Scheme  公式三中，100*w5*(1-SEd)应修改为100*w5*abs(1-SEd)))
